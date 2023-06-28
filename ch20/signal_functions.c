@@ -27,3 +27,13 @@ int printSigMask(FILE* of, const char* msg){
     printSigset(of, "\t\t", &currMask);
     return 0;
 }
+
+int printPendingSigs(FILE* of, const char* msg){
+    sigset_t pendingSigs;
+    if (msg != NULL)
+        fprintf(of, "%s", msg);
+    if (sigpending(&pendingSigs) == -1)
+        return -1;
+    printSigset(of, "\t\t", &pendingSigs);
+    return 0;
+}
