@@ -1,2 +1,2 @@
 # tlpi
-Code samples and exercise solutions for <The Linux Programming Interface>
+Code samples and exercise solutions for *The Linux Programming Interface*
